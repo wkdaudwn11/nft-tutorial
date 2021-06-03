@@ -15,7 +15,7 @@ contract Color is ERC721, ERC721Enumerable {
     constructor() ERC721("Color", "COLOR") {}
 
     // ERC721, ERC721Enumerable 파일에서 _beforeTokenTransfer(), supportsInterface()가
-    // 서로 겹치기 때문에 그거 해결해주는 코드 같음
+    // 서로 겹치기 때문에 override 하여 충돌 해결해주는 코드
     // 함수명 겹친 거 해결 시작
     function _beforeTokenTransfer(address from, address to, uint256 tokenId)
         internal
